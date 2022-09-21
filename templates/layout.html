@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>No Fluff Jobs Reports</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+</head>
+<body>
+    <header>
+        <h1>No Fluff Jobs Reports</h1>
+        <nav>
+            <ul>
+                <li><a href="/home/">Home</a></li>
+                <li><a href="/how-does-it-work/">How does it work?</a></li>
+                <li><a href="#">All reports</a></li>
+                <li><a href="#">Raw data</a></li>
+                <li><a href="#">Author & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html>
