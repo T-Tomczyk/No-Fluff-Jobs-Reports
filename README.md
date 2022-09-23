@@ -1,2 +1,2 @@
-# NoFluffJobsAnalyzer
-No Fluff Jobs is an IT-oriented job board. NoFluffJobsAnalyzer scrapes the job offers posted, collects the data, and produces various reports and statistics.
+# No Fluff Jobs Reports
+This application collects, stores, and analyzes job offers posted on the IT-oriented job board called No Fluff Jobs. 
