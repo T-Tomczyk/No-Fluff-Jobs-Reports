@@ -19,40 +19,40 @@ class KeyInfoExtractor:
 		# output of this class.
 		self.clean_dict = {
 			# dates
-			'PostedDate': 		None,
-			'DownloadDate': 	None,
+			'PostedDate': None,
+			'DownloadDate': None,
 
 			# basics
-			'NoFluffJobsID': 	None,
-			'Title': 			None,
-			'Category': 		None,
+			'ExternalID': None,
+			'Title': None,
+			'Category': None,
 
 			# seniorities
-			'Seniorities': 		None,
+			'Seniorities': None,
 
 			# url
-			'URL':				None,
+			'URL': None,
 
 			# company_size
-			'CompanySize': 		None,
+			'CompanySize': None,
 
 			# salaries
-			'SalaryCurrency': 	None,
-			'SalaryMinUoP': 	None,
-			'SalaryMaxUoP': 	None,
-			'SalaryMinB2B': 	None,
-			'SalaryMaxB2B': 	None,
-			'SalaryMinOther': 	None,
-			'SalaryMaxOther': 	None,
+			'SalaryCurrency': None,
+			'SalaryMinUoP': None,
+			'SalaryMaxUoP': None,
+			'SalaryMinB2B': None,
+			'SalaryMaxB2B': None,
+			'SalaryMinOther': None,
+			'SalaryMaxOther': None,
 
 			# skills
-			'MustSkills': 		set(),
-			'NiceSkills': 		set(),
+			'MustSkills': set(),
+			'NiceSkills': set(),
 
 			# locations
-			'AvailableRemote': 	False,
-			'AvailableInPoland':False,
-			'Locations': 		set(),
+			'AvailableRemote': False,
+			'AvailableInPoland': False,
+			'Locations': set(),
 		}
 
 		self.populate_dates()
@@ -130,7 +130,7 @@ class KeyInfoExtractor:
 		self.clean_dict['DownloadDate'] = str(datetime.date.today())
 
 	def populate_basics(self):
-		self.clean_dict['NoFluffJobsID'] = self.raw_dict.get('id', None)
+		self.clean_dict['ExternalID'] = self.raw_dict.get('id', None)
 		self.clean_dict['Title'] = self.raw_dict.get('title', None)
 		self.clean_dict['Category'] = self.get_by_path(self.raw_dict, ['basics', 'category'])
 
